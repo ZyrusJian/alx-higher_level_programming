@@ -1,2 +1,2 @@
 # alx-higher_level_programming
-This Repository is a collection of task for learning high level programing such as python, java....
+This repository is for learning and practicing higher level programing languages.
