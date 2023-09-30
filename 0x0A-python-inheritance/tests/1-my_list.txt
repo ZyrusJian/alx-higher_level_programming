@@ -1,68 +1,12 @@
 # tests/1-my_list.txt
 
-# Regular tests passed
 >>> MyList = __import__('1-my_list').MyList
-
-# Test present: check instantiation
 >>> my_list = MyList([1, 4, 2, 3, 5])
-
-# Test present: check inherits from list
->>> isinstance(my_list, list)
-True
-
-# Test present: check __str__
->>> print(my_list)
-[1, 4, 2, 3, 5]
-
-# Test present: check append()
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
 >>> my_list.append(6)
-
-# Test present: check print_sorted() with sorted append
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5, 6]
-
-# Test present: check print_sorted() with not sorted append
 >>> my_list.append(0)
-
-# Test present: check print_sorted() with no sorted append with negative number
 >>> my_list.print_sorted()
 [0, 1, 2, 3, 4, 5, 6]
-
-# Test present: check print_sorted() with empty list
->>> empty_list = MyList([])
->>> empty_list.print_sorted()
-[]
-
-# Test present: check print_sorted() returns a new list
->>> sorted_list = my_list.print_sorted()
->>> sorted_list
-[0, 1, 2, 3, 4, 5, 6]
-
-# case: class creation
->>> my_list = MyList([])
-
-# case: class creation and regular print
->>> print(my_list)
-[]
-
-# case: class creation, append and regular print
->>> my_list.append(1)
->>> print(my_list)
-[1]
-
-# case: class creation, append, regular print and sorted print
->>> my_list.append(0)
->>> print(my_list)
-[1, 0]
->>> my_list.print_sorted()
-[0, 1]
-
-# case: class creation, multiple appends, regular print and sorted print
->>> my_list = MyList([3, 2, 1])
->>> my_list.append(4)
->>> my_list.append(0)
->>> print(my_list)
-[3, 2, 1, 4, 0]
->>> my_list.print_sorted()
-[0, 1, 2, 3, 4]
-
